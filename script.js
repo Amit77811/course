@@ -382,11 +382,11 @@
 // }
 // else{
 //     greater = num3;
-// }
+// } 
 // console.log(greater, "is greater");
 
 
 
-
+ 
 //palindrome
 
