@@ -1,38 +1,90 @@
-
- let mother= {
-    name: "Priya Singh",
-    age: 32,
-    address: "Baner, Pune"
-  };
-
-  let student= {
-    name: "Pratik Patil",
-    age: 15,
-    class: "10th",
-    gender: "Male",
-    address: "Viman Nagar, Pune"
-  };
-
-
-mother.occupation="Housewife";//if not there then it gets added.
-mother.age=35;//if there then it gets updated.
-console.log({mother,student});
-
-//create a vehicle object with follwing prop
-// no. of seats, topSpeed, mileage, airbags
-
-let vehicle = {
-  seats: 5,
-  topSpeed: "180 km/h",
-  mileage: "15 km/l",
-  airbags: 2
+let parent = {
+  name: "Amit Deshmane",
+  age: 40,
+  address: "Baner, Pune"
 };
-delete vehicle.airbags;
 
-vehicle.address ={
-    addressLine1: "Aria tower",
-    addressLine2:"Baner",
-    city:"Pune",
-    state:"Maharashtra"
+let learner = {
+  name: "Karan",
+  age: 18,
+  class: "12th",
+  gender: "Male",
+  address: "Kothrud, Pune"
+};
+
+parent.job = "Teacher";
+parent.age = 42;
+console.log({ parent, learner });
+
+let car1 = {
+  seats: 4,
+  topSpeed: "200 km/h",
+  mileage: "20 km/l",
+  airbags: 4
+};
+delete car1.airbags;
+
+car1.location = {
+  addressLine1: "Galaxy Heights",
+  addressLine2: "Wakad",
+  city: "Pune",
+  state: "Maharashtra"
+};
+
+console.log({ car: car1 });
+console.log("City of car location is", car1?.location?.city);
+
+console.log(car1.brand); // undefine - because its not mentioned before
+car1.brand = "Hyundai";
+
+const car2 = {
+  brand: "Honda",
+  seats: 4,
+  topSpeed: "220 km/h",
+  mileage: "18 km/l",
+  airbags: 6,
+  colors: ["red", "black", "silver"],
+
+  location: {
+    addressLine1: "Skyline Towers",
+    addressLine2: "Aundh",
+    city: "Nagpur",
+    state: "Maharashtra"
+  }
+};
+
+const cars = [car1, car2];
+console.log({ cars });
+
+for (let i = 0; i < cars.length; i++) {
+  console.log(cars[i]?.brand);
+  console.log(cars[i]?.location?.city);
 }
-console.log(vehicle.address.city);
+
+
+
+const car3 = {
+  brand: "Toyota",
+  seats: 5,
+  topSpeed: "210 km/h",
+  currentSpeed: 70,
+  mileage: "16 km/l",
+  airbags: 6,
+  colors: ["white", "grey", "blue"],
+
+  location: {
+    addressLine1: "Orchid Residency",
+    addressLine2: "Hinjewadi",
+    city: "Nashik",
+    state: "Maharashtra"
+  },
+  isDriving: function () {
+    if (this.currentSpeed > 0) {
+      console.log(this.brand + " is running at speed " + this.currentSpeed);
+    } else {
+      console.log(this.brand + " is not running");
+    }
+  }
+};
+
+car3.isDriving();
