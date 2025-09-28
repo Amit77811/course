@@ -58,3 +58,32 @@ console.log(msg.includes("JavaScript"));
 let text = "amit deshmane";
 let capitalized = text.charAt(0).toUpperCase()  + text.slice(1);
 console.log(capitalized); 
+
+
+//  rotate the matrix by 90 degree
+
+function rotateImage(matrix) {
+  const n = matrix.length;
+  const m = matrix[0].length;
+
+  let result = [];
+  for (let i = 0; i < m; i++) {
+    result.push([]);
+  }
+
+  for (let i = 0; i < n; i++) {
+    for (let j = 0; j < m; j++) {
+      result[j][n - 1 - i] = matrix[i][j];
+    }
+  }
+
+  return result;
+}
+
+const matrix = [
+  [1,  2,  3,  4],
+  [5,  6,  7,  8],
+  [9, 10, 11, 12]
+];
+
+console.log(rotateImage(matrix));

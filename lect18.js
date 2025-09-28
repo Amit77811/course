@@ -14,8 +14,8 @@ console.log("baloon".includes('oon')); // can search for sting of more than or e
 console.log("baloon".includes('ooN')); // is case sensetive
 
 //replace()
-str= "showes";
-console.log(str.replace("s","d")); //returns a new string, doesnt change the original one
+str= "abcd";
+console.log(str.replaceAll("a","x")); //returns a new string, doesnt change the original one
 
 //replaceAll()
 str = "shoes";
@@ -39,7 +39,7 @@ console.log("acciojob".slice(4,-2));// stars st 4th index, ends before last 2 ch
 console.log("acciojob".slice(-7,-2));// stars from 7th element from end, and ends before 2nd element from end
 
 //repeat()
-console.log("abcd".repeat(4));
+console.log("abcd".repeat(2));
 console.log("abcd".__proto__);// consoles the wrapper object details
 
 //charAt()
@@ -61,3 +61,4 @@ console.log(+[]);
 
 
 
+console.log("abhishek".substring(-2,0)); //[0,6)
