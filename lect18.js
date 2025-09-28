@@ -4,7 +4,7 @@
 let words ="hi how was your day";
 let count =0;
 for(let i=0;i<words.length;i++){
-    if(words[i]==' '){
+    if(words[i] === ' '){
         count++;
     }
 }console.log(count+1);
